@@ -1,0 +1,131 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vh;
+    background-image: url(https://wallpapercave.com/wp/wp12519976.jpg);
+    background-size: cover;
+    font-family: Poppins;
+}
+
+.skills{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    box-shadow: 0 19px 38px #000, 0 15px 12px #000;
+}
+
+.skills h1{
+    
+    font-size: 45px;
+    text-align: center;
+}
+
+.skills-bar{
+    padding: 25px 30px;
+}
+.skills-bar .bar{
+    margin: 25px 0;
+}
+
+.skills-bar .bar .info span{
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.skills-bar .bar .info{
+    margin-bottom: 8px;
+    color: #07374a;
+}
+
+.skills-bar .bar .progress-line{
+    position: relative;
+    height: 10px;
+    width: 550px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+.bar .progress-line span{
+    position: absolute;
+    background: #ffbb00;
+    height: 100%;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    text-transform: uppercase;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.progress-line .html{
+    width: 90%;
+}
+.progress-line .css{
+    width: 80%;
+}
+.progress-line .bootstrap{
+    width: 82%;
+}
+.progress-line .javascript{
+    width: 60%;
+}
+.progress-line .java{
+    width: 65%;
+}
+
+.bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    height: 0;
+    right: 0;
+    top: -14px;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-style: #f0f0f0 ;
+    border-top-color: #07374a;
+}
+
+.bar .progress-line span::after{
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: #f0f0f0;
+    font-size: 12px;
+    font-weight: 700;
+    background: #504f4c;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.progress-line .html::after{
+    content: "90%";
+}
+
+.progress-line .css::after{
+    content: "80%";
+}
+
+.progress-line .bootstrap::after{
+    content: "82%";
+}
+
+.progress-line .javascript::after{
+    content: "60%";
+}
+
+.progress-line .java::after{
+    content: "65%";
+}
